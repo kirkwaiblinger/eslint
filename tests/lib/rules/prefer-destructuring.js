@@ -334,9 +334,10 @@ ruleTester.run("prefer-destructuring", rule, {
                 type: "VariableDeclarator"
             }]
         },
+
         {
             code: "foo = object.foo;",
-            output: null,
+            output: "({foo} = object);",
             errors: [{
                 messageId: "preferDestructuring",
                 data: { type: "object" },
@@ -418,9 +419,10 @@ ruleTester.run("prefer-destructuring", rule, {
                 type: "AssignmentExpression"
             }]
         },
+
         {
             code: "foo = object.foo;",
-            output: null,
+            output: "({foo} = object);",
             options: [
                 {
                     VariableDeclarator: { array: true, object: false },
