@@ -7,7 +7,7 @@ title: Code Path Analysis Details
 **Code path analysis is unreliable.**
 ESLint's code path analysis has never been trustworthy enough to build on, and its API (segments, `currentSegments`, `childCodePaths`) asks rules to hand-maintain state that the analysis should be answering directly.
 It has been effectively frozen for years.
-
+Use at your own risk.
 :::
 
 ESLint's rules can use code paths.
