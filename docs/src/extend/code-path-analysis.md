@@ -2,6 +2,14 @@
 title: Code Path Analysis Details
 ---
 
+:::warning
+
+**Code path analysis is unreliable.**
+ESLint's code path analysis has never been trustworthy enough to build on, and its API (segments, `currentSegments`, `childCodePaths`) asks rules to hand-maintain state that the analysis should be answering directly.
+It has been effectively frozen for years.
+
+:::
+
 ESLint's rules can use code paths.
 The code path is execution routes of programs.
 It forks/joins at such as `if` statements.
